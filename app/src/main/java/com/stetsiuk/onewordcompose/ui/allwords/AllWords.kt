@@ -15,14 +15,18 @@ import androidx.compose.ui.unit.ExperimentalUnitApi
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.TextUnitType
 import androidx.compose.ui.unit.dp
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.navigation.NavController
+import com.stetsiuk.onewordcompose.R
+import com.stetsiuk.onewordcompose.ui.Screen
 
 @OptIn(ExperimentalUnitApi::class)
 @Composable
 fun AllWords(
+    navController: NavController,
     modifier: Modifier = Modifier,
-    allWordViewModel: AllWordViewModel = viewModel(),
-    move: () -> Unit
+    allWordViewModel: AllWordViewModel = hiltViewModel(),
 ) {
     val wordsLiveData = allWordViewModel.getAllWords().observeAsState()
     val words = wordsLiveData.value
@@ -47,7 +51,7 @@ fun AllWords(
         verticalAlignment = Alignment.Bottom
     ) {
         Button(onClick = {
-            move()
+            navController.navigate(Screen.AddWordScreen.route)
         }) {
             Text(text = "Add new")
         }

@@ -10,13 +10,16 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.navigation.NavController
 
 @Composable
 fun AddNewWord(
+    navController: NavController,
     modifier: Modifier = Modifier,
-    addWordViewModel: AddNewWordViewModel = viewModel(),
-    moveBack: () -> Unit
+    addWordViewModel: AddNewWordViewModel = hiltViewModel(),
+    //moveBack: () -> Unit
 ) {
     val textFieldData = rememberSaveable() {
         mutableStateOf("")
@@ -36,7 +39,7 @@ fun AddNewWord(
         )
         Button(onClick = {
             addWordViewModel.addNewWord(textFieldData.value)
-            moveBack()
+            navController.popBackStack()
         }) {
             Text(text = "Add")
         }

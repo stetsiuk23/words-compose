@@ -2,6 +2,7 @@ package com.stetsiuk.onewordcompose.ui.addword
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import androidx.navigation.NavController
 import com.stetsiuk.onewordcompose.data.WordRepository
 import com.stetsiuk.onewordcompose.di.Constants
 import com.stetsiuk.onewordcompose.models.Word
@@ -11,7 +12,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class AddNewWordViewModel @Inject constructor(
-    private val wordRepository: WordRepository
+    private val wordRepository: WordRepository,
 ) : ViewModel() {
 
     fun addNewWord(word: String) {

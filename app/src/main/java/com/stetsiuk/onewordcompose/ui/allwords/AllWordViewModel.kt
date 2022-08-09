@@ -3,6 +3,7 @@ package com.stetsiuk.onewordcompose.ui.allwords
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import androidx.navigation.NavController
 import com.stetsiuk.onewordcompose.data.WordRepository
 import com.stetsiuk.onewordcompose.di.Constants
 import com.stetsiuk.onewordcompose.models.Word
@@ -13,7 +14,7 @@ import javax.inject.Inject
 @HiltViewModel
 class AllWordViewModel @Inject constructor(
     //private val savedStateHandle: SavedStateHandle,
-    private val wordRepository: WordRepository
+    private val wordRepository: WordRepository,
 ) : ViewModel() {
 
     fun getAllWords(): LiveData<List<Word>> {
