@@ -1,5 +1,6 @@
 package com.stetsiuk.onewordcompose.ui
 
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -20,17 +21,20 @@ fun NewWordApp(
         .padding(30.dp)
 ) {
     val navController = rememberNavController()
-    NavHost(navController = navController, startDestination = Screen.WordsScreen.route) {
+    NavHost(
+        navController = navController,
+        startDestination = Screen.WordsScreen.route,
+    ) {
         composable(route = Screen.WordsScreen.route) {
             AllWords(
                 navController = navController,
-                modifier = modifier
+                modifier = Modifier.fillMaxSize().padding(30.dp)
             )
         }
         composable(route = Screen.AddWordScreen.route) {
             AddNewWord(
                 navController = navController,
-                modifier = modifier
+                modifier = Modifier.fillMaxSize().padding(30.dp)
             )
         }
     }
