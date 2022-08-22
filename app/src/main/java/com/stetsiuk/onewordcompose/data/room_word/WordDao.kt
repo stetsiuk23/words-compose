@@ -1,4 +1,4 @@
-package com.stetsiuk.onewordcompose.data.room
+package com.stetsiuk.onewordcompose.data.room_word
 
 import androidx.lifecycle.LiveData
 import androidx.room.Dao

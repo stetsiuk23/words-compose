@@ -1,7 +1,7 @@
 package com.stetsiuk.onewordcompose.data
 
 import androidx.lifecycle.LiveData
-import com.stetsiuk.onewordcompose.data.room.WordDatabase
+import com.stetsiuk.onewordcompose.data.room_word.WordDatabase
 import com.stetsiuk.onewordcompose.models.Word
 import javax.inject.Inject
 

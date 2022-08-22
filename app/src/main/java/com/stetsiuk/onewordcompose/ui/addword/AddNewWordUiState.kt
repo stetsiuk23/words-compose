@@ -1,4 +1,4 @@
-package com.stetsiuk.onewordcompose.ui.addword.states
+package com.stetsiuk.onewordcompose.ui.addword
 
 import androidx.compose.ui.graphics.Color
 
