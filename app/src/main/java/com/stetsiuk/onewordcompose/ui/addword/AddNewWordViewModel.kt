@@ -7,7 +7,6 @@ import androidx.lifecycle.viewModelScope
 import com.stetsiuk.onewordcompose.app.Constants
 import com.stetsiuk.onewordcompose.data.WordRepository
 import com.stetsiuk.onewordcompose.models.Word
-import com.stetsiuk.onewordcompose.ui.addword.states.AddNewWordUiState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject

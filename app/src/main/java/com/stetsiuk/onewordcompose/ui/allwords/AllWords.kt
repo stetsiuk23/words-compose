@@ -22,7 +22,7 @@ import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import com.stetsiuk.onewordcompose.ui.Screen
-import com.stetsiuk.onewordcompose.ui.addword.states.AddNewWordUiState
+import com.stetsiuk.onewordcompose.ui.addword.AddNewWordUiState
 
 @Composable
 fun AllWords(
