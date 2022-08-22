@@ -1,4 +1,4 @@
-package com.stetsiuk.onewordcompose.di
+package com.stetsiuk.onewordcompose.app
 
 import kotlinx.coroutines.Dispatchers
 

@@ -1,7 +1,8 @@
-package com.stetsiuk.onewordcompose.di
+package com.stetsiuk.onewordcompose.app.di
 
 import android.content.Context
 import androidx.room.Room
+import com.stetsiuk.onewordcompose.app.Constants
 import com.stetsiuk.onewordcompose.data.room.WordDatabase
 import dagger.Module
 import dagger.Provides
