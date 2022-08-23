@@ -24,4 +24,5 @@ class AllWordViewModel @Inject constructor(
             wordRepository.deleteAllWords()
         }
     }
+
 }
